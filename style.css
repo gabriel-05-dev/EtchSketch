@@ -16,6 +16,7 @@
 .information {
     display: flex;
     justify-content: center;
+    font-weight: bold;
 }
 
 .containers {
@@ -29,4 +30,12 @@
     flex-wrap: wrap;
     gap: 0px;
     flex-shrink: 0;
+}
+
+.extraInfo {
+    font-size: small;
+    text-align: center;
+}
+body {
+    font-family:'Courier New', Courier, monospace;
 }
