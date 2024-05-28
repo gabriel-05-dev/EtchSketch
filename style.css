@@ -1,10 +1,9 @@
 .paint {
     border-color: black;
     border-style: solid;
-    border-width: 0.2px;
+    border-width: 0.1px;
     height: 10px;
     width: 20px;
-    opacity: 0.2;
 }
 
 .buttons {
