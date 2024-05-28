@@ -35,7 +35,7 @@ function createGrid(amount) {
         containerDiv.style = 'max-width: 65%;'
         clearGrid(),createBoard(amount);
     } else if (amount > 60) {
-        containerDiv.style = 'max-width: 85%;'
+        containerDiv.style = 'max-width: 75%;'
         clearGrid(),createBoard(amount);
     };
 //function to create the divs

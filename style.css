@@ -4,6 +4,9 @@
     border: 1px solid rgba(102, 102, 102, 0.65);
     height: 10px;
     width: 15px;
+    flex:1,0;
+    min-width: 0;
+    min-height: 0;
 }
 
 .buttons {
@@ -22,14 +25,14 @@
 .containers {
     display: flex;
     justify-content: center;
-    max-width: 75%;
     margin-top: 50px;
+    max-width: 75%;
     margin-left: auto;
     margin-right: auto;
     height: auto;
     flex-wrap: wrap;
     gap: 0px;
-    flex-shrink: 0;
+    flex-shrink: 1;
 }
 
 .extraInfo {
