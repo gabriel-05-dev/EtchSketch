@@ -15,20 +15,23 @@ clearBtn.addEventListener('click', () => {clearGrid()});
 customGrid.addEventListener('click', () => {clearGrid(),createGrid(takeInput())});
 
 function createGrid(amount) {
-    if (amount <= 25) {
+    if (amount <=10) {
+        containerDiv.style = 'max-width: 8%;'
+        clearGrid(),createBoard(amount);
+    } else if (amount <= 25 && amount > 10) {
         containerDiv.style = 'max-width: 25%;'
         clearGrid(),createBoard(amount);
-    } else if (amount <= 35) {
+    } else if (amount <= 35 && amount > 25) {
         containerDiv.style = 'max-width: 35%;'
         clearGrid(),createBoard(amount);
-    } else if (amount <=45) {
+    } else if (amount <=45 && amount >35) {
         containerDiv.style = 'max-width: 45%;'
         clearGrid(),createBoard(amount);
-    } else if (amount >=60) {
+    } else if (amount <=60 && amount > 45) {
         containerDiv.style = 'max-width: 65%;'
         clearGrid(),createBoard(amount);
-    } else if (amount >=85) {
-        containerDiv.style = 'max-width: 100%;'
+    } else if (amount > 60) {
+        containerDiv.style = 'max-width: 85%;'
         clearGrid(),createBoard(amount);
     };
 
@@ -45,7 +48,10 @@ function createGrid(amount) {
 
 function takeInput() {
     do {
-        amount = prompt('Input value for custom grid (Max 100)');
+        amount = prompt('Input value for custom grid(Max 100)');
+        if (amount == '') {
+            return amount = 25;
+        };
     } while (amount > 100);
     return amount;
     };
