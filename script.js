@@ -5,6 +5,8 @@ const Button64 = document.querySelector("#large");
 const Button128 = document.querySelector("#extralarge");
 const clearBtn = document.querySelector('#clear')
 const customGrid = document.querySelector('#custom')
+const cleanBtn = document.querySelector('#clean')
+
 
 
 Button16.addEventListener('click', () => {clearGrid(),createGrid(25)});
@@ -13,6 +15,7 @@ Button64.addEventListener('click', () => {clearGrid(),createGrid(45)});
 Button128.addEventListener('click', () => {clearGrid(),createGrid(60)});
 clearBtn.addEventListener('click', () => {clearGrid()});
 customGrid.addEventListener('click', () => {clearGrid(),createGrid(takeInput())});
+cleanBtn.addEventListener('click', () => {clearDrawing()});
 
 function createGrid(amount) {
     if (amount <=10) {
@@ -59,4 +62,10 @@ function takeInput() {
 
 function clearGrid() {
     containerDiv.innerHTML='';
+};
+
+function clearDrawing() {
+    for (const child of containerDiv.children) {
+        child.style = 'background-color:;';
+    };
 };
