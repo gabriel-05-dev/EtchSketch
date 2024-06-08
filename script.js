@@ -36,11 +36,12 @@ function createGrid(amount) {
 //function to take input from the user
 function takeInput() {
     do {
-        amount = prompt('Input value for custom grid(Max 100)');
+        amount = prompt('Input value for custom grid(Max 80)');
         if (amount == '') {
+            alert('no value specified. Setting to 25.')
             return amount = 25;
         };
-    } while (amount > 100);
+    } while (amount > 80);
     return amount;
     };
 
